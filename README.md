@@ -67,3 +67,7 @@ Alterar a class onde é criado do Swiper, para mais informações: [Api do Swipe
     }
   })
 ```
+
+## Dependencies
+
+* '*vendor*' Module

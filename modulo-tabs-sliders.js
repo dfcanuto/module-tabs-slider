@@ -74,7 +74,7 @@ Ecomisi.module('tabs-healthy', ['vendor', function(){
 
   // Criação do slider
   // Alterar classe de de iniciar slider
-  var sliderTabs = new Slider('.slider-tabs', {
+  var sliderTabs = new Swiper('.slider-tabs', {
     direction: 'horizontal',
     loop: false,
     slidesPerView:4,
