@@ -1,4 +1,4 @@
-Ecomisi.module('tabs-healthy', ['vendor', function(){
+cleaEcomisi.module('tabs-healthy', ['vendor', function(){
 
   // Array de container-centers
   // Alterar cada container para algo mais verboso
@@ -23,7 +23,7 @@ Ecomisi.module('tabs-healthy', ['vendor', function(){
   for(var i = 0; i < containersArr.length; i++){
     // Popular array de tabs e verificar se faltam containers
     if($(tabClass[i]).length === 0){
-      console.log('missing container-center number', i);
+      console.error('missing container-center number', i);
     }
     tabs.push($(tabClass[i]));
     // Adicionar index da tab
@@ -31,8 +31,8 @@ Ecomisi.module('tabs-healthy', ['vendor', function(){
 
     // Adicionar classes active à tab no index showTab
     if (i === showTab) {
-      tabClass[i].addClass(activeTabClass);
-      containersArr[i].addClass(activeContainerClass);
+      $(tabClass[i]).addClass(activeTabClass);
+      $(containersArr[i]).addClass(activeContainerClass);
     }
   }
 
@@ -45,9 +45,6 @@ Ecomisi.module('tabs-healthy', ['vendor', function(){
       var index = e.target.getAttribute('data-slider-index')
       index = Number(index);
 
-      // Eliminar after testing
-      console.log(e);
-      
       // Adicionar/Remover classes
       //
       // Ler target com jquery
